@@ -1,4 +1,4 @@
-# The Pest Exterminator Company Limited \u2014 Corporate Website
+# The Pest Exterminator Company Limited - Corporate Website
 
 Official Version 1 (MVP) corporate website for The Pest Exterminator Company
 Limited, Nairobi, Kenya. Built as a lead-generation brochure site with a
