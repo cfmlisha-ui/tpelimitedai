@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import SectionHeading from '@/components/ui/SectionHeading'
-import { siteConfig, mission, vision, coreValues, team, legalCompliance } from '@/lib/constants'
+import { siteConfig, mission, vision, coreValues, team, legalCompliance, accreditations } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'About Us',
@@ -97,6 +97,23 @@ export default function AboutPage() {
               </li>
             ))}
           </ul>
+
+          <div className="mt-8">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-brand-mocha-400">
+              Our accreditations
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {accreditations.map((item) => (
+                <span
+                  key={item.short}
+                  title={item.description}
+                  className="rounded-full border border-brand-ink-600 px-3 py-1 text-[10px] uppercase tracking-wide text-brand-mocha-400"
+                >
+                  {item.full}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

@@ -1,14 +1,16 @@
 import Hero from '@/components/home/Hero'
 import StatsBar from '@/components/home/StatsBar'
 import TrustStrip from '@/components/home/TrustStrip'
+import Accreditations from '@/components/home/Accreditations'
 import ServicesGrid from '@/components/home/ServicesGrid'
 import WhyChooseUs from '@/components/home/WhyChooseUs'
+import RetailProducts from '@/components/home/RetailProducts'
 import IndustriesStrip from '@/components/home/IndustriesStrip'
 import ClientsShowcase from '@/components/home/ClientsShowcase'
 import Testimonials from '@/components/home/Testimonials'
 import ProcessOverview from '@/components/home/ProcessOverview'
 import ContactTeaser from '@/components/home/ContactTeaser'
-import { siteConfig, contact } from '@/lib/constants'
+import { siteConfig, contact, accreditations } from '@/lib/constants'
 
 export default function HomePage() {
   // LocalBusiness structured data for local SEO (Google Business Profile parity).
@@ -33,6 +35,12 @@ export default function HomePage() {
     },
     foundingDate: String(siteConfig.founded),
     sameAs: [], // TODO: add social media profile URLs once finalized
+    hasCredential: accreditations.map((item) => ({
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: item.short,
+      name: item.full,
+      description: item.description,
+    })),
   }
 
   return (
@@ -44,8 +52,10 @@ export default function HomePage() {
       <Hero />
       <StatsBar />
       <TrustStrip />
+      <Accreditations />
       <ServicesGrid />
       <WhyChooseUs />
+      <RetailProducts />
       <IndustriesStrip />
       <ClientsShowcase />
       <Testimonials />

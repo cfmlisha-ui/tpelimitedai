@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import { ArrowRight, Bug, ClipboardCheck, Wind, Rat, Shield, Trees } from 'lucide-react'
+import { ArrowRight, Bug, ClipboardCheck, SearchCheck, Wind, Rat, Shield, Trees } from 'lucide-react'
 import SectionHeading from '@/components/ui/SectionHeading'
 import { services } from '@/lib/constants'
 
-const icons = [Bug, ClipboardCheck, Wind, Rat, Shield, Trees]
+const icons = [Bug, ClipboardCheck, SearchCheck, Wind, Rat, Shield, Trees]
 
 export default function ServicesGrid() {
   return (

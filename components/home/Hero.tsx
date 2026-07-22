@@ -18,8 +18,8 @@ export default function Hero() {
         </p>
 
         <h1 className="mb-3 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
-          Professional pest control for{' '}
-          <span className="text-brand-red-500">businesses that can&rsquo;t afford to fail</span>
+          To Solve Pest Problems{' '}
+          <span className="text-brand-red-500">For Our Clients</span>
         </h1>
 
         <p className="mb-5 max-w-xl text-sm leading-relaxed text-gray-400 sm:text-base">

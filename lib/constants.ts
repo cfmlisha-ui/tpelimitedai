@@ -7,7 +7,7 @@ export const siteConfig = {
   shortName: 'The Pest Exterminator',
   legalName: 'The Pest Exterminator Limited',
   founded: 2004,
-  tagline: 'Professional pest control for businesses that cannot afford to fail',
+  tagline: 'To solve pest problems for our clients',
   description:
     'Kenya\u2019s trusted pest control and environmental management company since 2004. NEMA registered, HACCP compliant, serving 400+ commercial locations across Kenya, South Sudan, and Rwanda.',
   url: 'https://www.thepestexterminator.co.ke', // TODO: replace with the live production domain
@@ -51,6 +51,40 @@ export const complianceBadges = [
   { short: 'HACCP', full: 'HACCP Compliant' },
   { short: 'Cap 242', full: 'Public Health Act Cap 242' },
   { short: 'OHS 2007', full: 'Occupational Health and Safety Act 2007' },
+]
+
+export type Accreditation = {
+  short: string
+  full: string
+  description: string
+}
+
+export const accreditations: Accreditation[] = [
+  {
+    short: 'PEMAK',
+    full: 'Pest Management Association of Kenya',
+    description: 'Registered member upholding industry best-practice standards for professional pest control.',
+  },
+  {
+    short: 'OSHA',
+    full: 'Occupational Safety and Health Act Compliant',
+    description: 'Operations audited against Kenya’s Occupational Safety and Health Act 2007 to protect staff and client premises.',
+  },
+  {
+    short: 'NEMA',
+    full: 'National Environment Management Authority',
+    description: 'Registered and licensed for environmentally responsible pest control and chemical handling.',
+  },
+  {
+    short: 'EIA',
+    full: 'Environmental Impact Assessment Licensed',
+    description: 'Qualified to conduct Environmental Impact Assessments in line with NEMA regulatory requirements.',
+  },
+  {
+    short: 'SIA',
+    full: 'Social Impact Assessment Licensed',
+    description: 'Qualified to conduct Social Impact Assessments alongside environmental compliance work.',
+  },
 ]
 
 export const legalCompliance = [
@@ -126,6 +160,34 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: 'ipm-auditing',
+    name: 'Integrated Pest Management (IPM) Auditing',
+    shortDescription:
+      'Full-site IPM audits combining inspection, risk assessment, compliance checks, and documented preventive recommendations for long-term pest prevention.',
+    overview:
+      'Our Integrated Pest Management (IPM) Auditing service takes a structured, whole-site approach to pest prevention rather than reactive treatment. Field supervisors and public health officers carry out a full site inspection, assess pest risk factors specific to your operations, check compliance against relevant health and safety legislation, and document findings in a formal report with preventive recommendations, supporting long-term pest prevention and regulatory compliance.',
+    benefits: [
+      'Comprehensive site inspection covering structural, sanitation, and operational risk factors',
+      'Formal risk assessment identifying conditions that could lead to infestation',
+      'Compliance checks against Kenyan health, safety, and environmental legislation',
+      'Full written documentation suitable for regulators, auditors, and insurers',
+      'Preventive recommendations that reduce reliance on reactive treatment over time',
+    ],
+    industries: ['Food manufacturing', 'Hospitality', 'Healthcare', 'Government', 'Warehousing'],
+    faqs: [
+      {
+        question: 'How is IPM auditing different from a standard pest audit?',
+        answer:
+          'A standard pest audit focuses on identifying current pest activity and compliance gaps. IPM auditing takes a broader, ongoing prevention-focused approach: it assesses the full site environment for conditions that could cause future infestations and builds a documented, preventive management plan rather than a one-off inspection report.',
+      },
+      {
+        question: 'Does an IPM audit support regulatory compliance?',
+        answer:
+          'Yes. The audit documentation is structured to support compliance checks against Kenyan health, safety, and environmental regulations, and can be used as evidence of due diligence for regulators, auditors, and insurers.',
+      },
+    ],
+  },
+  {
     slug: 'fumigation',
     name: 'Fumigation Services',
     shortDescription:
@@ -191,6 +253,72 @@ export const services: Service[] = [
     ],
     industries: ['Hospitality', 'Corporate offices', 'Residential estates'],
     faqs: [],
+  },
+]
+
+export type Product = {
+  slug: string
+  name: string
+  headline: string
+  shortDescription: string
+  overview: string
+  benefits: string[]
+  suitableFor: string[]
+  ctaLabel: string
+}
+
+// In-house manufactured fumigation chemicals, sold direct to small and medium businesses.
+export const products: Product[] = [
+  {
+    slug: 'proshield-insecticide-concentrate',
+    name: 'ProShield Insecticide Concentrate',
+    headline: 'Professional-grade residual insecticide, manufactured in-house',
+    shortDescription:
+      'A broad-spectrum, low-odour insecticide concentrate for crawling and flying insects, manufactured to the same standard we use on our own commercial contracts.',
+    overview:
+      'ProShield is our in-house manufactured residual insecticide concentrate, formulated for cockroaches, ants, flies, and other common crawling and flying insects. It is the same formulation our field technicians apply on commercial contracts, now available for businesses that want to run their own maintenance treatments between professional visits.',
+    benefits: [
+      'Broad-spectrum control of crawling and flying insects',
+      'Low-odour, non-staining formulation safe for occupied premises',
+      'Long-lasting residual protection reduces treatment frequency',
+      'Manufactured and quality-checked in-house to commercial-grade standard',
+    ],
+    suitableFor: ['Small retail outlets and shops', 'Restaurants and cafes', 'Offices and warehouses', 'Property managers'],
+    ctaLabel: 'Contact us for commercial pricing',
+  },
+  {
+    slug: 'rodentguard-bait-blocks',
+    name: 'RodentGuard Bait Blocks',
+    headline: 'Weatherproof rodenticide bait blocks for ongoing rodent control',
+    shortDescription:
+      'Durable, weatherproof bait blocks formulated for effective rat and mouse control in and around commercial premises.',
+    overview:
+      'RodentGuard bait blocks are manufactured in-house for use in bait stations around warehouses, stores, and food-handling premises. The weatherproof formulation holds up in outdoor bait stations and high-humidity storage areas, supporting a consistent baiting programme between professional inspections.',
+    benefits: [
+      'Weatherproof, wax-based block resists humidity and rain',
+      'Palatable formulation for reliable uptake',
+      'Designed for use in tamper-resistant bait stations',
+      'Supports ongoing rodent management between scheduled visits',
+    ],
+    suitableFor: ['Warehousing and storage facilities', 'Food manufacturing and retail', 'Agricultural premises', 'Estate and facility managers'],
+    ctaLabel: 'Contact us for commercial pricing',
+  },
+  {
+    slug: 'termibarrier-termiticide',
+    name: 'TermiBarrier Termiticide',
+    headline: 'Soil-applied termiticide for lasting structural protection',
+    shortDescription:
+      'A soil-applied termiticide formulated for pre- and post-construction barrier treatment against termite infestation.',
+    overview:
+      'TermiBarrier is our in-house manufactured soil termiticide, formulated for creating a continuous chemical barrier around foundations and structural timber. It is suited to both pre-construction ground treatment and post-construction perimeter application, giving businesses a reliable option for protecting property investments.',
+    benefits: [
+      'Creates a continuous barrier against subterranean termites',
+      'Suitable for both pre-construction and post-construction application',
+      'Long-lasting protection for structural timber and foundations',
+      'Manufactured in-house to the standard used on our own contracts',
+    ],
+    suitableFor: ['Construction and property developers', 'Warehousing and industrial premises', 'Small and medium business owners', 'Facility managers'],
+    ctaLabel: 'Contact us for commercial pricing',
   },
 ]
 

@@ -33,6 +33,10 @@ export const metadata: Metadata = {
     'pest inspection services Kenya',
     'pest exterminator Kenya',
     'commercial pest control Nairobi',
+    'PEMAK accredited pest control',
+    'NEMA registered pest control Kenya',
+    'OSHA compliant pest control',
+    'EIA licensed pest control Kenya',
   ],
   authors: [{ name: siteConfig.name }],
   openGraph: {

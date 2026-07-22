@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { siteConfig, contact, complianceBadges } from '@/lib/constants'
+import { siteConfig, contact, complianceBadges, products } from '@/lib/constants'
 
 const footerColumns = [
   {
@@ -8,9 +8,15 @@ const footerColumns = [
       { href: '/services/pest-control', label: 'Pest control' },
       { href: '/services/fumigation', label: 'Fumigation' },
       { href: '/services/pest-audit-certification', label: 'Pest audits' },
+      { href: '/services/rodent-control', label: 'Rodent control' },
       { href: '/services/termite-control', label: 'Termite control' },
       { href: '/services/landscaping', label: 'Landscaping' },
+      { href: '/services/ipm-auditing', label: 'IPM auditing' },
     ],
+  },
+  {
+    title: 'Products',
+    links: products.map((product) => ({ href: `/products/${product.slug}`, label: product.name })),
   },
   {
     title: 'Industries',
@@ -38,7 +44,7 @@ export default function Footer() {
   return (
     <footer className="bg-brand-ink-800 px-6 pb-6 pt-12 text-gray-400 lg:px-10">
       <div className="container-max">
-        <div className="grid grid-cols-1 gap-10 border-b border-brand-ink-600 pb-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-10 border-b border-brand-ink-600 pb-10 sm:grid-cols-2 lg:grid-cols-5">
           <div>
             <p className="mb-1 text-sm font-bold text-white">{siteConfig.name}</p>
             <p className="mb-4 text-xs leading-relaxed text-brand-mocha-400">

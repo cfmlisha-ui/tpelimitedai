@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, Bug, ClipboardCheck, Wind, Rat, Shield, Trees } from 'lucide-react'
+import { ArrowRight, Bug, ClipboardCheck, SearchCheck, Wind, Rat, Shield, Trees } from 'lucide-react'
 import { services, siteConfig } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: `Explore the full range of pest control, fumigation, audit, and landscaping services offered by ${siteConfig.name}.`,
 }
 
-const icons = [Bug, ClipboardCheck, Wind, Rat, Shield, Trees]
+const icons = [Bug, ClipboardCheck, SearchCheck, Wind, Rat, Shield, Trees]
 
 export default function ServicesIndexPage() {
   return (
