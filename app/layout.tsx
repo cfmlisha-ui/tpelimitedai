@@ -5,6 +5,7 @@ import { siteConfig } from '@/lib/constants'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import StickyContactBar from '@/components/layout/StickyContactBar'
+import { Analytics } from '@vercel/analytics/next'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -82,6 +83,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <StickyContactBar />
+        <Analytics />
       </body>
     </html>
   )
