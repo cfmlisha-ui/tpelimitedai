@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-brand-ink-700 antialiased;
+  }
+
+  /* Visible focus rings for keyboard navigation \u2014 accessibility requirement */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    @apply outline-none ring-2 ring-brand-red-500 ring-offset-2;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply px-6 py-16 md:px-10 md:py-20 lg:px-16;
+  }
+
+  .container-max {
+    @apply mx-auto max-w-7xl;
+  }
+}
